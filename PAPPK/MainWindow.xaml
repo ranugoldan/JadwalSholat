@@ -1,0 +1,42 @@
+﻿<Window x:Class="PAPPK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PAPPK"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="557" Width="717" Name="MyWindow">
+    <Grid>
+        <ComboBox x:Name="comboBoxProvinsi" SelectionChanged="ProvinsiSelected" HorizontalAlignment="Left" Margin="181,52,0,0" VerticalAlignment="Top" Width="193" RenderTransformOrigin="0.517,1.364"/>
+        <Label x:Name="label" Content="Provinsi" HorizontalAlignment="Left" Margin="44,48,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Kabupaten/Kota" HorizontalAlignment="Left" Margin="44,92,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Kecamatan" HorizontalAlignment="Left" Margin="44,137,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Kelurahan" HorizontalAlignment="Left" Margin="44,178,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxKota" SelectionChanged="KotaSelected" HorizontalAlignment="Left" Margin="181,96,0,0" VerticalAlignment="Top" Width="193"/>
+        <ComboBox x:Name="comboBoxKecamatan" SelectionChanged="KecamatanSelected" HorizontalAlignment="Left" Margin="181,141,0,0" VerticalAlignment="Top" Width="193"/>
+        <ComboBox x:Name="comboBoxKelurahan" SelectionChanged="KelurahanSelected" HorizontalAlignment="Left" Margin="181,182,0,0" VerticalAlignment="Top" Width="193"/>
+        <Button x:Name="button" Content="Set Lokasi" HorizontalAlignment="Left" Margin="181,225,0,0" VerticalAlignment="Top" Width="193" Click="button_Click"/>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="29,282,0,0" VerticalAlignment="Top">
+            
+        </DataGrid>
+        <Label x:Name="label4" Content="Waktu Sholat" HorizontalAlignment="Left" Margin="445,20,0,0" VerticalAlignment="Top"/>
+        <StackPanel>
+            <Label x:Name="label5" Content="Subuh" HorizontalAlignment="Left" Margin="445,52,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label6" Content="Terbit" HorizontalAlignment="Left" Margin="445,7,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label7" Content="Dzuhur" HorizontalAlignment="Left" Margin="445,7,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label8" Content="Ashar" HorizontalAlignment="Left" Margin="445,7,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label9" Content="Magrib" HorizontalAlignment="Left" Margin="445,7,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label10" Content="Isya" HorizontalAlignment="Left" Margin="445,7,0,0" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel x:Name="stackPrayer">
+            <TextBox x:Name="subuh" Text="{Binding Path=fajr, Mode=OneWay}" HorizontalAlignment="Left" Height="23" Margin="531,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="terbit"  Text="{Binding Path=shurooq, Mode=OneWay}" HorizontalAlignment="Left" Height="23" Margin="531,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="dzuhur"  Text="{Binding Path=dhuhr, Mode=OneWay}" HorizontalAlignment="Left" Height="23" Margin="531,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="ashar"  Text="{Binding Path=asr, Mode=OneWay}" HorizontalAlignment="Left" Height="23" Margin="531,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="magrib"  Text="{Binding Path=maghrib, Mode=OneWay}" HorizontalAlignment="Left" Height="23" Margin="531,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="isya"  Text="{Binding Path=isha, Mode=OneWay}" HorizontalAlignment="Left" Height="23" Margin="531,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
